@@ -1,5 +1,5 @@
+import Video from '@/components/Video';
 import React from 'react';
-import Video from './video';
 
 type VideoListProps = {
   videoIds: Array<string>

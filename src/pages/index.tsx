@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import YouTube from 'react-youtube';
-import VideoList from './components/VideoList';
+import VideoList from '@/components/VideoList';
 
 export default function Home() {
   const videoIds = ['I9n3nzZQrS0', 'WXRJ4YWvClY', 'fGyVpUgSSuA', 'jk3dwcwco2c', '49IoiZf7o_M', 'lOyHnCqWLR4'];
