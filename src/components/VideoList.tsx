@@ -1,14 +1,15 @@
-import Video from '@/components/Video';
+import VideoFrame from '@/components/VideoFrame';
+import Video from '@/models/Video';
 import React from 'react';
 
 type VideoListProps = {
-  videoIds: Array<string>
+  videos: Array<Video>
 }
 
-export default function VideoList({ videoIds }: VideoListProps) {
+export default function VideoList({ videos }: VideoListProps) {
   return (
     <>
-      {videoIds.map((videoId) => <Video key={videoId} videoId={videoId} />)}
+      {videos.map((video) => <VideoFrame key={video.$id} video={video} />)}
     </>
   );
 }
