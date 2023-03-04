@@ -14,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <h1>ndmvisuals</h1>
+        <h1 className="text-3xl font-bold underline">ndmvisuals</h1>
         <VideoList videoIds={videoIds} />
       </main>
     </>

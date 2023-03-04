@@ -8,7 +8,7 @@ type VideoListProps = {
 export default function VideoList({ videoIds }: VideoListProps) {
   return (
     <>
-      {videoIds.map((videoId) => <Video videoId={videoId} />)}
+      {videoIds.map((videoId) => <Video key={videoId} videoId={videoId} />)}
     </>
   );
 }
