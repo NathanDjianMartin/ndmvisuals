@@ -7,10 +7,10 @@ export default function Home() {
   const videos = [
     new Video('I9n3nzZQrS0', 'Residence Meunier'),
     new Video('WXRJ4YWvClY', 'Inpulse Coaching'),
-    new Video('fGyVpUgSSuA', 'Inpulse Coaching'),
-    new Video('jk3dwcwco2c', 'Inpulse Coaching'),
-    new Video('49IoiZf7o_M', 'Inpulse Coaching'),
-    new Video('lOyHnCqWLR4', 'Inpulse Coaching'),
+    new Video('fGyVpUgSSuA', 'Motor Yacht M'),
+    new Video('jk3dwcwco2c', 'Salon Cortès'),
+    new Video('49IoiZf7o_M', 'Moana'),
+    new Video('lOyHnCqWLR4', 'Motor Yacht E-Motion'),
   ];
 
   return (

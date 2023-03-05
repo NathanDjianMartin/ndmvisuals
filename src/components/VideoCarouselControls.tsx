@@ -1,7 +1,6 @@
 import React from 'react';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 import Circle from '@/components/Circle';
-import Error from 'next/error';
 
 type VideoCarouselControlsProps = {
   onPrevious: () => void,
@@ -22,26 +21,21 @@ export default function VideoCarouselControls({
     dotsArray.push(i);
   }
 
-  if (selectedDot >= dotsCount || selectedDot < 0) {
-    // TODO: better handle error
-    throw new Error('Out of bound in VideoCarousel');
-  }
-
   const renderCircles = () => dotsArray.map((index) => {
     if (selectedDot === index) {
-      return <Circle />;
+      return <Circle key={index} />;
     }
-    return <Circle filled={false} />;
+    return <Circle key={index} filled={false} />;
   });
 
-  const chevronClasses = 'stroke-2 h-6 fill-slate-500';
+  const chevronClasses = 'h-8 md:h-10 fill-slate-500 animate-pulse';
 
   return (
-    <div className="flex place-content-between">
+    <div className="flex place-content-between items-center">
       <button type="button" onClick={onPrevious}>
         <ChevronLeftIcon className={chevronClasses} />
       </button>
-      <div className="flex">
+      <div className="flex space-x-1 sm:space-x-2">
         {renderCircles()}
       </div>
       <button type="button" onClick={onNext}>
