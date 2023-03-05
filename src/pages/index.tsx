@@ -5,10 +5,13 @@ import Video from '@/models/Video';
 
 export default function Home() {
   const videos = [
-    new Video('I9n3nzZQrS0', 'Title', 'This is a description'),
+    new Video('I9n3nzZQrS0', 'Residence Meunier'),
+    new Video('WXRJ4YWvClY', 'Inpulse Coaching'),
+    new Video('fGyVpUgSSuA', 'Inpulse Coaching'),
+    new Video('jk3dwcwco2c', 'Inpulse Coaching'),
+    new Video('49IoiZf7o_M', 'Inpulse Coaching'),
+    new Video('lOyHnCqWLR4', 'Inpulse Coaching'),
   ];
-
-  //  ['I9n3nzZQrS0', 'WXRJ4YWvClY', 'fGyVpUgSSuA', 'jk3dwcwco2c', '49IoiZf7o_M', 'lOyHnCqWLR4'];
 
   return (
     <>
@@ -18,8 +21,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="p-6">
-        <h1 className="text-3xl font-bold underline">ndmvisuals</h1>
+      <main className="p-4">
         <VideoList videos={videos} />
       </main>
     </>

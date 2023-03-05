@@ -1,4 +1,4 @@
-import VideoFrame from '@/components/VideoFrame';
+import VideoCard from '@/components/VideoCard';
 import Video from '@/models/Video';
 import React from 'react';
 
@@ -9,7 +9,7 @@ type VideoListProps = {
 export default function VideoList({ videos }: VideoListProps) {
   return (
     <>
-      {videos.map((video) => <VideoFrame key={video.$id} video={video} />)}
+      {videos.map((video) => <VideoCard key={video.$id} video={video} />)}
     </>
   );
 }
