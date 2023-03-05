@@ -1,6 +1,7 @@
 import React from 'react';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 import Circle from '@/components/Circle';
+import Error from 'next/error';
 
 type VideoCarouselControlsProps = {
   onPrevious: () => void,
@@ -16,8 +17,14 @@ export default function VideoCarouselControls({
   selectedDot,
 }: VideoCarouselControlsProps) {
   const dotsArray: number[] = [];
+
   for (let i = 0; i < dotsCount; i += 1) {
     dotsArray.push(i);
+  }
+
+  if (selectedDot >= dotsCount || selectedDot < 0) {
+    // TODO: better handle error
+    throw new Error('Out of bound in VideoCarousel');
   }
 
   const renderCircles = () => dotsArray.map((index) => {

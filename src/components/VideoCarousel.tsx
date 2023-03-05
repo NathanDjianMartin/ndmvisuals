@@ -9,13 +9,14 @@ type VideoListProps = {
 
 export default function VideoCarousel({ videos }: VideoListProps) {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const maxIndex = videos.length - 1;
 
   const onNextVideo = () => {
-    setSelectedIndex(selectedIndex + 1);
+    setSelectedIndex(selectedIndex === maxIndex ? 0 : selectedIndex + 1);
   };
 
   const onPreviousVideo = () => {
-    setSelectedIndex(selectedIndex - 1);
+    setSelectedIndex(selectedIndex === 0 ? maxIndex : selectedIndex - 1);
   };
 
   return (
