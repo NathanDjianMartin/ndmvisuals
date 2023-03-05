@@ -3,12 +3,9 @@ export default class Video {
 
   private title: string;
 
-  private description: string;
-
-  constructor($id: string, $title: string, $description: string) {
+  constructor($id: string, $title: string) {
     this.id = $id;
     this.title = $title;
-    this.description = $description;
   }
 
   /**
@@ -25,13 +22,5 @@ export default class Video {
      */
   public get $title(): string {
     return this.title;
-  }
-
-  /**
-     * Getter $description
-     * @return {string}
-     */
-  public get $description(): string {
-    return this.description;
   }
 }
