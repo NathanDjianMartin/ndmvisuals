@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import VideoList from '@/components/VideoList';
+import VideoCarousel from '@/components/VideoCarousel';
 import Video from '@/models/Video';
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="p-4">
-        <VideoList videos={videos} />
+        <VideoCarousel videos={videos} />
       </main>
     </>
   );
