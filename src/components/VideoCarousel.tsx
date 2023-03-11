@@ -1,4 +1,3 @@
-import Card from '@/components/Card';
 import VideoCarouselControls from '@/components/VideoCarouselControls';
 import YoutubeEmbed from '@/components/YoutubeEmbed';
 import Video from '@/models/Video';
@@ -22,12 +21,9 @@ export default function VideoCarousel({ videos }: VideoListProps) {
   };
 
   return (
-    <Card>
-      <div className="flex-col items-center justify-center content-center mb-6">
-        <h3 className="text-lg font-bold mb-2">{selectedVideo.$title}</h3>
-        <div className="flex-1 max-w-screen-xl">
-          <YoutubeEmbed video={selectedVideo} />
-        </div>
+    <div className="flex-col items-center justify-center content-center">
+      <div className="mb-4">
+        <YoutubeEmbed video={selectedVideo} />
       </div>
       <VideoCarouselControls
         onNext={onNextVideo}
@@ -35,6 +31,6 @@ export default function VideoCarousel({ videos }: VideoListProps) {
         dotsCount={videos.length}
         selectedDot={selectedIndex}
       />
-    </Card>
+    </div>
   );
 }

@@ -28,7 +28,7 @@ export default function VideoCarouselControls({
     return <Circle key={index} filled={false} />;
   });
 
-  const chevronClasses = 'h-8 md:h-10 fill-slate-500 animate-pulse';
+  const chevronClasses = 'h-8 md:h-10 fill-slate-500';
 
   return (
     <div className="flex place-content-between items-center">
